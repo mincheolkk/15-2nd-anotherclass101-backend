@@ -232,12 +232,11 @@ class KakaoSignInView(View):
 
 class ProfileView(View):
 
-    #@id_auth
+    @id_auth
     def post(self, request):
         data = json.loads(request.body)
 
-        #user = request.user
-        user_id = 11
+        user           = request.user
         name           = data['name']
         nickname       = data['nickname']
 
